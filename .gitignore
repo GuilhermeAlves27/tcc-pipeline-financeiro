@@ -1,0 +1,11 @@
+# Ambientes Virtuais
+venv/
+env/
+.env
+
+# Arquivos temporários e cache do Python
+__pycache__/
+*.pyc
+
+data/raw/*.json
+data/processed/*.csv
