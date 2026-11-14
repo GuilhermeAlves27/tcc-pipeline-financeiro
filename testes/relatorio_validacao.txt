@@ -1,0 +1,26 @@
+============================================================
+RELATÓRIO DE VALIDAÇÃO DE DADOS
+Pipeline de Indicadores Financeiros — TCC UNIFAGOC
+Gerado em: 14/11/2026 13:57:20
+============================================================
+
+TESTE                          STATUS     DETALHE
+------------------------------------------------------------
+Integridade referencial        PASSOU     
+Valores nulos                  PASSOU     
+Duplicatas                     PASSOU     
+Cobertura temporal             PASSOU     2015-01-02 → 2026-11-13
+Alinhamento temporal           PASSOU     
+Contagem de registros          PASSOU     13002 registros
+Plausibilidade SELIC           PASSOU     
+Plausibilidade IPCA            PASSOU     
+Plausibilidade USD_BRL         PASSOU     
+
+============================================================
+RESUMO
+------------------------------------------------------------
+  Testes aprovados: 9
+  Testes com aviso: 0
+  Testes falhos:    0
+  Taxa de aprovação: 100.0%
+============================================================
