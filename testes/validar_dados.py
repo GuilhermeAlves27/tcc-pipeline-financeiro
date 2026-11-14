@@ -1,23 +1,4 @@
-"""
-testes/validar_dados.py
-─────────────────────────────────────────────────────────────────────
-Suite de testes de validação de integridade e qualidade dos dados.
 
-Executa verificações automatizadas sobre o Star Schema no PostgreSQL:
-  1. Integridade referencial (sem órfãos na fato)
-  2. Ausência de valores nulos
-  3. Cobertura temporal completa
-  4. Plausibilidade dos valores por indicador
-  5. Contagem correta de registros
-  6. Alinhamento temporal (todas as datas têm os 3 indicadores)
-
-Gera um relatório de validação que serve como evidência documental
-para o capítulo de Resultados do TCC.
-
-Uso:
-  python testes/validar_dados.py
-─────────────────────────────────────────────────────────────────────
-"""
 
 import sys
 from datetime import datetime
@@ -163,10 +144,7 @@ def teste_plausibilidade(engine, res):
 
 
 def teste_alinhamento_temporal(engine, res):
-    """
-    Verifica que cada data possui exatamente os 3 indicadores.
-    Este é o teste que valida o núcleo do TCC: o alinhamento temporal.
-    """
+
     with engine.connect() as conn:
         row = conn.execute(text("""
             SELECT COUNT(*) AS datas_incompletas FROM (

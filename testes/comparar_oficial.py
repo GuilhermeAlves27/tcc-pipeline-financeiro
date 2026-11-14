@@ -1,23 +1,3 @@
-"""
-testes/comparar_oficial.py
-─────────────────────────────────────────────────────────────────────
-Comparação dos valores armazenados no banco com os valores oficiais
-publicados pelo Banco Central e pelo IBGE.
-
-Este teste responde à parte de QUALIDADE da questão de pesquisa do TCC:
-  "...reduz o tempo E OS ERROS do processo de coleta..."
-
-Estratégia:
-  1. Seleciona datas de referência conhecidas (marcos históricos)
-  2. Extrai os valores do banco para essas datas
-  3. Compara com os valores oficiais catalogados manualmente
-  4. Calcula a taxa de acurácia e gera tabela para o TCC
-
-Uso:
-  python testes/comparar_oficial.py
-─────────────────────────────────────────────────────────────────────
-"""
-
 import sys
 from pathlib import Path
 
@@ -32,22 +12,6 @@ AZUL  = "\033[94m"
 RESET = "\033[0m"
 
 
-# ─────────────────────────────────────────────────────────────────
-# VALORES OFICIAIS DE REFERÊNCIA
-# ─────────────────────────────────────────────────────────────────
-# Estes valores foram catalogados manualmente a partir das fontes
-# oficiais (site do BCB e do IBGE) para servir de "gabarito".
-#
-# IMPORTANTE PARA O TCC:
-#   Verifique e ajuste estes valores consultando as fontes oficiais
-#   antes de rodar. Os valores abaixo são exemplos representativos
-#   e devem ser confirmados nas fontes primárias:
-#     - Selic:  https://www.bcb.gov.br/controleinflacao/historicotaxasjuros
-#     - IPCA:   https://www.ibge.gov.br/ (SIDRA)
-#     - Câmbio: https://www.bcb.gov.br/estabilidadefinanceira/historicocotacoes
-#
-# Formato: (sigla, data_iso, valor_oficial, tolerancia)
-#   A tolerância acomoda diferenças de arredondamento entre fontes.
 
 VALORES_OFICIAIS = [
     # ── Selic Diária (% ao dia - SGS 11) ──────────────────────────

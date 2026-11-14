@@ -1,24 +1,4 @@
-"""
-testes/benchmark_eficiencia.py
-─────────────────────────────────────────────────────────────────────
-Medição do GANHO DE EFICIÊNCIA do pipeline automatizado.
 
-Este é o teste central do TCC — responde diretamente à questão
-de pesquisa:
-  "Em que medida um pipeline de dados automatizado baseado na API
-   do BCB reduz o TEMPO e os ERROS do processo de coleta e modelagem
-   de indicadores macroeconômicos em comparação ao processo manual?"
-
-Estratégia:
-  1. Cronometra cada camada do pipeline automatizado (Bronze/Silver/Gold)
-  2. Compara com uma estimativa fundamentada do processo manual
-  3. Calcula o ganho percentual de tempo
-  4. Gera tabela comparativa para o capítulo de Resultados
-
-Uso:
-  python testes/benchmark_eficiencia.py
-─────────────────────────────────────────────────────────────────────
-"""
 
 import sys
 import time
@@ -33,18 +13,6 @@ AMAR  = "\033[93m"
 RESET = "\033[0m"
 
 
-# ─────────────────────────────────────────────────────────────────
-# BASELINE — Estimativa do processo manual
-# ─────────────────────────────────────────────────────────────────
-# Estas estimativas representam o tempo médio que um analista levaria
-# para executar cada etapa MANUALMENTE, sem o pipeline.
-#
-# METODOLOGIA PARA O TCC:
-#   Para fundamentar estes números no seu trabalho, você pode:
-#   (a) Cronometrar você mesmo fazendo o processo manual uma vez, ou
-#   (b) Usar estas estimativas conservadoras baseadas nas etapas reais.
-#
-# Cada valor está em SEGUNDOS.
 
 PROCESSO_MANUAL = {
     "Acessar o site do BCB e localizar a série Selic":        180,
